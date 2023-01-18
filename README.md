@@ -253,9 +253,9 @@ class UselessFunction
         {
             // do constant time stuff
             System.out.println(n + ": " + n);
-            
+            SuckyFunction(n-1);
         }      
-        SuckyFunction(n-1);
+        
     }
 
      // Driver code
@@ -389,7 +389,7 @@ public static long fibRec( int n )
 	if( n <= 2 )
 	 	return 1;
 	else
-		return fib( n - 1 ) + fib( n - 2 );
+		return fibRec( n - 1 ) + fib( n - 2 );
 }
 ```
 But while elegant, this algorithm is extremely inefficient: O(2<sup>n</sup>).
